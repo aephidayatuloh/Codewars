@@ -1,0 +1,76 @@
+project:
+  type: book
+  output-dir: _book
+  preview: 
+    port: 4203
+    browser: true
+
+book:
+  title: "Codewars Challenge"
+  author: 
+    - name: Aep Hidayatuloh #, S.Stat
+      # affiliations: StarCore Analytics
+      email: aephidayatuloh.mail@gmail.com
+  date: last-modified
+  date-format: "[Last Updated on ] DD MMMM, YYYY"
+  # favicon: logo.png
+  twitter-card: true
+  site-url: https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/
+  search: true 
+  repo-url: https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/tree/main
+  sidebar:
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - part: "2025"
+      chapters:
+      - cw0001evenodd.qmd 
+      - cw0002multiply.qmd
+      - text: "Count Sheep"
+        file: cw0003countsheep.qmd
+      - cw0004reducegrow.qmd
+      - cw0005makenegative.qmd
+      # - cw006positive_sum.qmd
+      # - cw007reversedstrings.qmd
+      # - cw008bool_to_word.qmd
+      # - cw009number_to_string.qmd
+      # - cw010opposite.qmd
+      # - cw011removeChar.qmd
+      # - cw012square_sum.qmd
+    
+
+  
+format:
+  html:
+    theme: cosmo
+    df-print: tibble
+    css: style.css
+    code-link: true 
+    # toc-depth: 3 
+    toc-expand: true
+    section-divs: false
+    html-math-method: katex
+    badge:
+      - key: kyu8
+        colour: grey
+      - key: kyu7
+        colour: grey
+      - key: kyu6
+        colour: gold
+      - key: kyu5
+        colour: gold
+      - key: kyu4
+        colour: blue
+      - key: kyu3
+        colour: blue
+      - key: kyu2
+        colour: purple
+      - key: kyu1
+        colour: purple
+
+knitr: 
+  opts_chunk: 
+    comment: "##" 
+    out.width: "100%"
+execute: 
+  cache: true

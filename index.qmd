@@ -1,0 +1,13 @@
+# Pengantar {.unnumbered} 
+
+Buku ini adalah catatan penyelesaian dalam mengerjakan tantangan-tantangan logika dan pemrograman Codewars menggunakan R/Python dan RStudio/Positron.
+
+::: {.logo-icon}
+![](R.png) 
+![](python.png) 
+![](RStudio-icon.png) 
+![](positron.png) 
+:::
+
+
+Hal ini terinspirasi dari kegiatan di YouTube nya Pak Sandhika Galih WPU.
