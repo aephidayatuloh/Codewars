@@ -1,0 +1,55 @@
+# Multiply  
+
+<span class="badge rounded-pill quarto-badge">8Kyu</span> Tantangan #2/366 - 02 Feb 2025  
+
+<https://www.codewars.com/kata/50654ddff44f800200000004>
+
+
+## Instruction  
+
+> This code does not execute properly. Try to figure out why.
+```{r}
+#| eval: false
+mul <- function(a, b) {
+  a * c # try to figure out why it doesn't work!
+}
+```
+
+## YouTube Video  
+
+{{< video https://www.youtube.com/embed/L8aczEhqymk >}}
+
+## Solution Code  
+
+Karena argumen dari function `mul()` adalah `a` dan `b` sedangkan operasi perkalian di dalamnya menggunakan `c` yang belum diketahui dan tidak ada objek tersebut.
+
+**Solusi**: ganti objek `c` di dalam function `mul()` dengan `b` dari argumen function tersebut.
+
+```{r}
+mul <- function(a, b) {
+  a * b 
+}
+
+```
+
+## Test  
+
+
+```{r}
+library(testthat)
+
+test_that("test for associativity of multiplication", {
+  a <- runif(1, 0, 10000)
+  b <- runif(1, 0, 10000)
+  c <- runif(1, 0, 10000)
+  expect_equal(mul(a, b), a * b)
+  expect_equal(mul(mul(a, b), c), a * b * c)
+  expect_equal(mul(a, mul(b, c)), a * b * c)
+})
+```
+
+----
+
+**Supported by** 
+
+![StarCore Analytics](new_starcore_logo.png){fig-width="100%"}
