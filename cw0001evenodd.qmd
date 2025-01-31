@@ -1,0 +1,68 @@
+# Even or Odd 
+
+<span class="badge rounded-pill quarto-badge">8Kyu</span> Tantangan #1/366 - 01 Feb 2025  
+
+<https://www.codewars.com/kata/53da3dbb4a5168369a0000fe>
+
+
+## Instruction  
+
+> Create a function that takes an integer as an argument and returns `"Even"` for even numbers or `"Odd"` for odd numbers.
+
+## YouTube Video  
+
+{{< video https://www.youtube.com/embed/L8aczEhqymk >}}
+
+## Solution Code  
+
+Solusi bar-bar
+
+```{r}
+even_or_odd <- function(n) {
+  ifelse(abs(n/2 - as.integer(n/2)) == 0.5, "Odd", "Even")
+}
+
+```
+
+Solusi simple
+
+```{r}
+even_or_odd <- function(n) {
+  #  %% operator modulo
+  ifelse(n %% 2 == 1, "Odd", "Even")
+}
+
+```
+
+```{r}
+even_or_odd <- function(n) c("Even", "Odd")[n %% 2 + 1]
+
+```
+
+## Test  
+
+
+```{r}
+library(testthat)
+test_that('even_or_odd(1) returns "Odd"', {
+  expect_equal(even_or_odd(1), "Odd")
+})
+test_that('even_or_odd(2) returns "Even"', {
+  expect_equal(even_or_odd(2), "Even")
+})
+test_that('even_or_odd(0) returns "Even"', {
+  expect_equal(even_or_odd(0), "Even")
+})
+test_that('even_or_odd(-1) returns "Odd"', {
+  expect_equal(even_or_odd(-1), "Odd")
+})
+test_that('even_or_odd(-2) returns "Even"', {
+  expect_equal(even_or_odd(-2), "Even")
+})
+```
+
+----
+
+**Supported by** 
+
+![StarCore Analytics](new_starcore_logo.png){fig-width="100%"}
