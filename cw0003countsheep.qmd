@@ -1,0 +1,62 @@
+#  If you can’t sleep, just count sheep!!  
+
+<span class="badge rounded-pill quarto-badge">8Kyu</span> Tantangan #3/366 - 03 Feb 2025  
+
+<https://www.codewars.com/kata/5b077ebdaf15be5c7f000077>
+
+
+## Instruction  
+
+> Given a non-negative integer, `3` for example, return a string with a murmur: `"1 sheep…2 sheep…3 sheep…"`. Input will always be valid, i.e. no negative integers.
+
+## YouTube Video  
+
+{{< video https://www.youtube.com/embed/L8aczEhqymk >}}
+
+## Solution Code  
+
+Solusi bar-bar
+
+
+```{r}
+
+countSheep <- function(num){
+  if(num == 0){
+    return("")
+  } else {
+    result <- ""
+    for(i in 1:num){
+      result <- paste(result, i, " sheep...", sep = "")
+    }
+    return(result)
+  }
+}
+```
+Solusi simple
+
+
+```{r}
+
+countSheep <- function(num){
+  ifelse(num == 0, "", paste(1:num, "sheep...", collapse = ""))
+}
+```
+## Test  
+
+
+```{r}
+library(testthat)
+
+test_that("Fixed tests", {
+  expect_equal(countSheep(0), "")
+  expect_equal(countSheep(1), "1 sheep...")
+  expect_equal(countSheep(2), "1 sheep...2 sheep...")
+  expect_equal(countSheep(3), "1 sheep...2 sheep...3 sheep...")
+})
+```
+
+----
+
+**Supported by** 
+
+![StarCore Analytics](new_starcore_logo.png){fig-width="100%"}
