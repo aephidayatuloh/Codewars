@@ -1,0 +1,156 @@
+
+body {
+	padding: 2rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+}
+
+h1, .h1, .title {
+	font-size: 2rem;
+	margin-top: 0;
+}
+
+p {
+	text-align: justify;
+	color: rgb(72, 74, 80);
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.card {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 16px;
+	border: 1px solid lightgray;
+	border-radius: 16px;
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
+
+.logo-icon {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-icon img {
+	margin: 0.5rem;
+	width: auto; /* Sesuaikan lebar gambar agar pas dalam satu baris */
+	height: 8rem; /* Menjaga aspek rasio gambar */
+}
+
+.quarto-badge {
+    vertical-align: text-bottom;
+    font-size: .65em;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+.badge {
+    display: inline-block;
+	margin-right: 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+	background-color: rgb(122, 122, 122);
+    text-align: center;
+    vertical-align: baseline;
+    padding: 0.35em 0.65em;
+    white-space: nowrap;
+}
+
+.sidebar-navigation {
+	padding-left: 10px;
+  }
+  
+  .sidebar-menu-container {
+	min-width: 247px;
+  }
+  
+  div.sidebar-item-container>a>span.menu-text {
+	font-weight: bold;
+	color: #646464;
+  }
+  div.sidebar-item-container>a>span.menu-text:hover, span.menu-text:focus {
+	font-weight: bold;
+	color: #5063d3;
+  }
+  
+  .sidebar-item-section {
+	font-weight: bold;
+	color: #cecece;
+  }
+  ul>li>div>a>span.menu-text>span.chapter-number {
+	font-weight: normal;
+  }
+  ul>li>div>a>span.menu-text>span.chapter-title {
+	font-weight: normal;
+  }
+  
+  .sidebar-navigation a {
+	color:inherit;
+  }
+  a:hover {
+	--bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+  }
+  div.sidebar-item-container:hover, div.sidebar-item-container:focus {
+	color: rgba(33, 81, 191, 0.8);
+  }
+  .quarto-title {
+	content: " ";
+	padding-top: 1.5em;
+  }
+  
+  .chapter-number::before {
+	content: "";
+  }
+  .chapter-number::after {
+	content: "";
+  }
+  
+  @media(min-width: 992px) {
+	#quarto-sidebar {
+		display:flex;
+		flex-direction: column;
+		margin-left: -24px !important;
+	}
+  
+	.nav-page .nav-page-text,.sidebar-navigation .sidebar-section .sidebar-item {
+		font-size: .875rem;
+	}
+  
+	.sidebar-navigation .sidebar-item {
+		font-size: .925rem;
+	}
+  
+	.sidebar.sidebar-navigation {
+		display: block;
+		position: sticky;
+	}
+  
+	.sidebar-search {
+		width: 100%;
+	}
+  
+	.sidebar .sidebar-footer {
+		visibility: visible;
+	}
+  }
+  
+  @media(min-width: 992px) {
+	#quarto-sidebar-glass {
+		display:none;
+	}
+  }
+  
+  .center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+  }
+  

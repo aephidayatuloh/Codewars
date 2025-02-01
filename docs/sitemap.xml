@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/index.html</loc>
+    <lastmod>2025-02-01T19:37:59.297Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0001evenodd.html</loc>
+    <lastmod>2025-01-31T17:50:24.998Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0002multiply.html</loc>
+    <lastmod>2025-01-31T18:04:40.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0003countsheep.html</loc>
+    <lastmod>2025-01-31T18:11:36.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0004reducegrow.html</loc>
+    <lastmod>2025-01-31T18:19:21.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0005makenegative.html</loc>
+    <lastmod>2025-01-31T18:27:23.719Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/cw0006positivesum.html</loc>
+    <lastmod>2025-02-01T02:05:11.397Z</lastmod>
+  </url>
+</urlset>
