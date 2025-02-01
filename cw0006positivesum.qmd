@@ -1,0 +1,75 @@
+#  Sum of positive    
+
+<span class="badge rounded-pill quarto-badge">8Kyu</span> Tantangan #6/366 - 06 Feb 2025  
+
+<https://www.codewars.com/kata/5715eaedb436cf5606000381>
+
+
+## Instruction  
+
+> You get an array of numbers, return the sum of all of the positives ones.
+
+Example `[1,-4,7,12] => 1 + 7 + 12 = 20`
+
+Note: if there is nothing to sum, the sum is default to `0`.
+
+
+## YouTube Video  
+
+{{< video https://www.youtube.com/embed/L8aczEhqymk >}}
+
+## Solution Code  
+
+Solusi bar-bar
+
+
+```{r}
+
+positive_sum <- function(vec){
+  pos_vec <- c()
+  for(i in vec){
+    if(i > 0){
+      pos_vec <- c(pos_vec, i)
+    } else {
+      pos_vec <- c(pos_vec, 0)
+    } 
+  }
+  return(sum(pos_vec))
+}
+```
+
+Solusi simple
+
+
+```{r}
+positive_sum <- function(vec){
+  vec[vec < 0] <- 0
+  sum(vec)
+}
+```
+
+```{r}
+positive_sum <- function(vec)sum(vec[vec>0])
+```
+
+
+## Test  
+
+
+```{r}
+library(testthat)
+
+test_that('Basic tests', {
+  expect_equal(positive_sum(c(1,2,3,4,5)),15)
+  expect_equal(positive_sum(c(1,-2,3,4,5)),13)
+  expect_equal(positive_sum(c(-1,2,3,4,-5)),9)
+  expect_equal(positive_sum(c()),0)
+  expect_equal(positive_sum(c(-1,-2,-3,-4,-5)),0)
+})
+```
+
+----
+
+**Supported by** 
+
+![StarCore Analytics](new_starcore_logo.png){fig-width="100%"}

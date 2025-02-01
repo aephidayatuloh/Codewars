@@ -49,5 +49,4 @@ po/*~
 rsconnect/
 
 /.quarto/
-_book/
 *_cache/ 

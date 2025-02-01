@@ -1,0 +1,78 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Codewars Challenge",
+    "section": "",
+    "text": "Pengantar\nBuku ini adalah catatan penyelesaian dalam mengerjakan tantangan-tantangan logika dan pemrograman Codewars menggunakan R/Python dan RStudio/Positron.\n\n   \n\nHal ini terinspirasi dari kegiatan di YouTube nya Pak Sandhika Galih WPU.",
+    "crumbs": [
+      "Pengantar"
+    ]
+  },
+  {
+    "objectID": "cw0001evenodd.html",
+    "href": "cw0001evenodd.html",
+    "title": "\n1  Even or Odd\n",
+    "section": "",
+    "text": "8Kyu Tantangan #1/366 - 01 Feb 2025\nhttps://www.codewars.com/kata/53da3dbb4a5168369a0000fe\n\n1.1 Instruction\n\nCreate a function that takes an integer as an argument and returns \"Even\" for even numbers or \"Odd\" for odd numbers.\n\n\n1.2 YouTube Video\n\n\n1.3 Solution Code\nSolusi bar-bar\n\neven_or_odd &lt;- function(n) {\n  ifelse(abs(n/2 - as.integer(n/2)) == 0.5, \"Odd\", \"Even\")\n}\n\nSolusi simple\n\neven_or_odd &lt;- function(n) {\n  #  %% operator modulo\n  ifelse(n %% 2 == 1, \"Odd\", \"Even\")\n}\n\n\neven_or_odd &lt;- function(n) c(\"Even\", \"Odd\")[n %% 2 + 1]\n\n\n1.4 Test\n\nlibrary(testthat)\ntest_that('even_or_odd(1) returns \"Odd\"', {\n  expect_equal(even_or_odd(1), \"Odd\")\n})\n\n## Test passed 🎉\n\ntest_that('even_or_odd(2) returns \"Even\"', {\n  expect_equal(even_or_odd(2), \"Even\")\n})\n\n## Test passed 🥳\n\ntest_that('even_or_odd(0) returns \"Even\"', {\n  expect_equal(even_or_odd(0), \"Even\")\n})\n\n## Test passed 😸\n\ntest_that('even_or_odd(-1) returns \"Odd\"', {\n  expect_equal(even_or_odd(-1), \"Odd\")\n})\n\n## Test passed 🎉\n\ntest_that('even_or_odd(-2) returns \"Even\"', {\n  expect_equal(even_or_odd(-2), \"Even\")\n})\n\n## Test passed 🎊\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Even or Odd</span>"
+    ]
+  },
+  {
+    "objectID": "cw0002multiply.html",
+    "href": "cw0002multiply.html",
+    "title": "\n2  Multiply\n",
+    "section": "",
+    "text": "8Kyu Tantangan #2/366 - 02 Feb 2025\nhttps://www.codewars.com/kata/50654ddff44f800200000004\n\n2.1 Instruction\n\nThis code does not execute properly. Try to figure out why.\n\n\nmul &lt;- function(a, b) {\n  a * c # try to figure out why it doesn't work!\n}\n\n\n2.2 YouTube Video\n\n\n2.3 Solution Code\nKarena argumen dari function mul() adalah a dan b sedangkan operasi perkalian di dalamnya menggunakan c yang belum diketahui dan tidak ada objek tersebut.\nSolusi: ganti objek c di dalam function mul() dengan b dari argumen function tersebut.\n\nmul &lt;- function(a, b) {\n  a * b \n}\n\n\n2.4 Test\n\nlibrary(testthat)\n\ntest_that(\"test for associativity of multiplication\", {\n  a &lt;- runif(1, 0, 10000)\n  b &lt;- runif(1, 0, 10000)\n  c &lt;- runif(1, 0, 10000)\n  expect_equal(mul(a, b), a * b)\n  expect_equal(mul(mul(a, b), c), a * b * c)\n  expect_equal(mul(a, mul(b, c)), a * b * c)\n})\n\n## Test passed 🥇\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Multiply</span>"
+    ]
+  },
+  {
+    "objectID": "cw0003countsheep.html",
+    "href": "cw0003countsheep.html",
+    "title": "\n3  If you can’t sleep, just count sheep!!\n",
+    "section": "",
+    "text": "8Kyu Tantangan #3/366 - 03 Feb 2025\nhttps://www.codewars.com/kata/5b077ebdaf15be5c7f000077\n\n3.1 Instruction\n\nGiven a non-negative integer, 3 for example, return a string with a murmur: \"1 sheep…2 sheep…3 sheep…\". Input will always be valid, i.e. no negative integers.\n\n\n3.2 YouTube Video\n\n\n3.3 Solution Code\nSolusi bar-bar\n\ncountSheep &lt;- function(num){\n  if(num == 0){\n    return(\"\")\n  } else {\n    result &lt;- \"\"\n    for(i in 1:num){\n      result &lt;- paste(result, i, \" sheep...\", sep = \"\")\n    }\n    return(result)\n  }\n}\n\nSolusi simple\n\ncountSheep &lt;- function(num){\n  ifelse(num == 0, \"\", paste(1:num, \"sheep...\", collapse = \"\"))\n}\n\n\n3.4 Test\n\nlibrary(testthat)\n\ntest_that(\"Fixed tests\", {\n  expect_equal(countSheep(0), \"\")\n  expect_equal(countSheep(1), \"1 sheep...\")\n  expect_equal(countSheep(2), \"1 sheep...2 sheep...\")\n  expect_equal(countSheep(3), \"1 sheep...2 sheep...3 sheep...\")\n})\n\n## Test passed 🥳\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Count Sheep</span>"
+    ]
+  },
+  {
+    "objectID": "cw0004reducegrow.html",
+    "href": "cw0004reducegrow.html",
+    "title": "\n4  Beginner - Reduce but Grow!\n",
+    "section": "",
+    "text": "8Kyu Tantangan #4/366 - 04 Feb 2025\nhttps://www.codewars.com/kata/57f780909f7e8e3183000078\n\n4.1 Instruction\n\nGiven a non-empty array of integers, return the result of multiplying the values together in order.\n\nExample:[1, 2, 3, 4] =&gt; 1 * 2 * 3 * 4 = 24\n\n4.2 YouTube Video\n\n\n4.3 Solution Code\nSolusi bar-bar\n\ngrow &lt;- function(arr) {\n  result &lt;- 1\n  for(i in arr){\n    result &lt;- result * i\n  }\n  return(result)\n}\n\nSolusi simple\n\n# grow &lt;- function(arr) prod(arr)\ngrow &lt;- prod\n\nFunction prod() adalah function untuk mengalikan nilai dari satu vector numeric, cara kerjanya sama persis dengan yang diinginkan. Oleh karena itu cukup meng-copy function prod() sebagai grow().\n\n4.4 Test\n\nlibrary(testthat)\ntest_that(\"basic tests\", {\n  expect_equal(grow(c(1, 2, 3)), 6)\n  expect_equal(grow(c(4, 1, 1, 1, 4)), 16)\n  expect_equal(grow(c(2, 2, 2, 2, 2, 2)), 64)\n})\n\n## Test passed 🎉\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Beginner - Reduce but Grow!</span>"
+    ]
+  },
+  {
+    "objectID": "cw0005makenegative.html",
+    "href": "cw0005makenegative.html",
+    "title": "\n5  Return Negative\n",
+    "section": "",
+    "text": "8Kyu Tantangan #5/366 - 05 Feb 2025\nhttps://www.codewars.com/kata/55685cd7ad70877c23000102\n\n5.1 Instruction\n\nIn this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?\n\nExamples\n\nmake_negative(1);  # return -1  \nmake_negative(-5); # return -5\nmake_negative(0);  # return 0\n\nNotes\n\nThe number can be negative already, in which case no change is required.\n\nZero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.\n\n\n5.2 YouTube Video\n\n\n5.3 Solution Code\nSolusi bar-bar\n\nmake_negative &lt;- function(num){\n  ifelse(num &lt;= 0, num, -1*num)\n}\n\nSolusi simple\n\nmake_negative &lt;- function(num)-abs(num)\n\n\n5.4 Test\n\nlibrary(testthat)\n\ntest_that('Basic tests', {\n  expect_equal(make_negative(42), -42)\n  expect_equal(make_negative(-9), -9)\n  expect_equal(make_negative(0), 0)\n  expect_equal(make_negative(1), -1)\n  expect_equal(make_negative(-1), -1)\n})\n\n## Test passed 🎉\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Return Negative</span>"
+    ]
+  },
+  {
+    "objectID": "cw0006positivesum.html",
+    "href": "cw0006positivesum.html",
+    "title": "\n6  Sum of positive\n",
+    "section": "",
+    "text": "8Kyu Tantangan #6/366 - 06 Feb 2025\nhttps://www.codewars.com/kata/5715eaedb436cf5606000381\n\n6.1 Instruction\n\nYou get an array of numbers, return the sum of all of the positives ones.\n\nExample [1,-4,7,12] =&gt; 1 + 7 + 12 = 20\nNote: if there is nothing to sum, the sum is default to 0.\n\n6.2 YouTube Video\n\n\n6.3 Solution Code\nSolusi bar-bar\n\npositive_sum &lt;- function(vec){\n  pos_vec &lt;- c()\n  for(i in vec){\n    if(i &gt; 0){\n      pos_vec &lt;- c(pos_vec, i)\n    } else {\n      pos_vec &lt;- c(pos_vec, 0)\n    } \n  }\n  return(sum(pos_vec))\n}\n\nSolusi simple\n\npositive_sum &lt;- function(vec){\n  vec[vec &lt; 0] &lt;- 0\n  sum(vec)\n}\n\n\npositive_sum &lt;- function(vec)sum(vec[vec&gt;0])\n\n\n6.4 Test\n\nlibrary(testthat)\n\ntest_that('Basic tests', {\n  expect_equal(positive_sum(c(1,2,3,4,5)),15)\n  expect_equal(positive_sum(c(1,-2,3,4,5)),13)\n  expect_equal(positive_sum(c(-1,2,3,4,-5)),9)\n  expect_equal(positive_sum(c()),0)\n  expect_equal(positive_sum(c(-1,-2,-3,-4,-5)),0)\n})\n\n## Test passed 🥳\n\n\n\nSupported by\n\n\nStarCore Analytics",
+    "crumbs": [
+      "2025",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sum of positive</span>"
+    ]
+  }
+]

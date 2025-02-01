@@ -30,13 +30,13 @@ book:
         file: cw0003countsheep.qmd
       - cw0004reducegrow.qmd
       - cw0005makenegative.qmd
-      # - cw006positive_sum.qmd
-      # - cw007reversedstrings.qmd
-      # - cw008bool_to_word.qmd
-      # - cw009number_to_string.qmd
-      # - cw010opposite.qmd
-      # - cw011removeChar.qmd
-      # - cw012square_sum.qmd
+      - cw0006positivesum.qmd
+      # - cw0007reversedstrings.qmd
+      # - cw0008bool_to_word.qmd
+      # - cw0009number_to_string.qmd
+      # - cw0010opposite.qmd
+      # - cw0011removeChar.qmd
+      # - cw0012square_sum.qmd
     
 
   
