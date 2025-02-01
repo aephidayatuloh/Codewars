@@ -1,1 +1,1 @@
-Sitemap: https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/sitemap.xml
+Sitemap: https://aephidayatuloh.github.io/codewarschallenges/sitemap.xml

@@ -13,15 +13,17 @@ book:
       email: aephidayatuloh.mail@gmail.com
   date: last-modified
   date-format: "[Last Updated on ] DD MMMM, YYYY"
-  # favicon: logo.png
+  favicon: icon.png
   twitter-card: true
-  site-url: https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/
+  site-url: https://aephidayatuloh.github.io/codewarschallenges/
   search: true 
-  repo-url: https://huggingface.co/spaces/aephidayatuloh/codewarschallenge/tree/main
+  repo-url: https://github.com//aephidayatuloh/codewarschallenges/
   sidebar:
     collapse-level: 1
   chapters:
+    - part: DAFTAR ISI
     - index.qmd
+    
     - part: "2025"
       chapters:
       - cw0001evenodd.qmd 
